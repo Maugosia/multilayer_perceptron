@@ -1,1 +1,1 @@
-# multilayer_perceptron
+# Perceptron wielowarstwowy

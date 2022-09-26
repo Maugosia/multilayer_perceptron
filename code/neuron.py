@@ -1,6 +1,7 @@
 import numpy as np
 from math import sqrt
 
+
 class Neuron:
     def __init__(self, input_size, activation_fun):
         self.in_size = input_size
@@ -39,8 +40,8 @@ class Neuron:
         sum_of_weighted = np.sum(weighted_input)
         sum_of_weighted_bias = sum_of_weighted + self.bias
         
-        variables = sorted(self.activation_function().free_symbols, key = lambda symbol: symbol.name)
-        out = self.activation_function().evalf(subs = dict(zip(variables,np.array([sum_of_weighted_bias]))))
+        variables = sorted(self.activation_function().free_symbols, key=lambda symbol: symbol.name)
+        out = self.activation_function().evalf(subs=dict(zip(variables, np.array([sum_of_weighted_bias]))))
 
         self.output_before_activation = sum_of_weighted_bias
         self.output = out
@@ -73,4 +74,3 @@ class Neuron:
         """
         gradient = -bias_diff*beta
         self.bias = self.bias + gradient
-

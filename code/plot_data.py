@@ -16,7 +16,7 @@ def plot_learning_data(train_data, validation_data, plot_title):
     ax.legend(loc="best")
     plt.savefig("out_plots/" + plot_title + ".png")
     plt.show()
-    plt.clf()
+
 
 def plot_confusion_matrix(predicted_values, correct_values, plot_title):
     conf_matrix = confusion_matrix(correct_values, predicted_values)
@@ -26,4 +26,3 @@ def plot_confusion_matrix(predicted_values, correct_values, plot_title):
     plt.title(plot_title, fontsize=18)
     plt.savefig("out_plots/" + plot_title + ".png")
     plt.show()
-    plt.clf()

@@ -1,12 +1,12 @@
-## Perceptron wielowarstwowy
-# Wykonawcy - Sofiia Levchenko [sofiia2002], Małgorzata Sikora [Maugosia]
-# Wstęp
-Celem zadania była implementacja sieci perceptronu wielowarstwowego o wybranym
+# Perceptron wielowarstwowy
+***Wykonawcy - Sofiia Levchenko [sofiia2002], Małgorzata Sikora [Maugosia]***
+## Wstęp
+Tematem projektu jest implementacja perceptronu wielowarstwowego o wybranym
 algorytmie optymalizacji gradientowej z algorytmem propagacji wstecznej i przetestowanie jego
 działania na ogólnodostępnym zbiorze danych MNIST.
 Zadanie zrealizowano w sposób ogólny tak, aby sieć dało się testować również na innych
 zbiorach danych.
-# Struktura projektu  
+## Struktura projektu  
 Ze względu na specyfikę wykonywanego zadania, zdecydowałyśmy się, że struktura projektu
 będzie wyglądała w następujący sposób:
 * main.py - zawiera wywołania eksperymentów przeprowadzonych w trakcie realizacji
@@ -44,7 +44,7 @@ uczenia sieci neuronowej
 * mlextend - biblioteka zawierająca narzędzie pozwalające w łatwy sposób automatycznie
 generować ilustrację macierz pomyłek.
 * matplotlib - biblioteka ułatwiająca tworzenie wykresów
-# Decyzje projektowe
+## Decyzje projektowe
 
 Główna część implementacji problemu zawarta jest w dwóch klasach - Neuron oraz
 MultilayerPerceptron.
@@ -97,7 +97,7 @@ następnie na jej podstawie jest obliczana odchyłka dla każdej z wag oraz bias
 dla N próbek z paczki) dla każdej kolejnej warstwy (od ostatniej do pierwszej) na zasadzie reakcji
 łańcuchowej
 
-# Opis wykonanych eksperymentów
+## Opis wykonanych eksperymentów
 
 Ponieważ na chwilę obecną nie istnieją metody automatycznej generacji hiperparametrów
 sieci neuronowej dla wszystkich możliwych zadań (typu regresji czy klasyfikacji) i wszystkich
@@ -138,7 +138,7 @@ zestawem parametrów był:
 warstwy ukrytej oraz logistic dla warstwy wyjściowej
 * Wykorzystanie parametru beta równego 0.4
 
-# Wyniki dla zbioru MNIST - pierwszy eksperyment
+## Wyniki dla zbioru MNIST - pierwszy eksperyment
 
 Pierwszy eksperyment stanowił wstępne badanie mające na celu określenie, czy wybrane wstępnie parametry mają szansę dać dobre wyniki na docelowym zbiorze MNIST po 30 epokach. 
 
@@ -160,7 +160,7 @@ Hiperparametry dla tego treningu wynosiły:
 
 Jak widać, dla tak małego zbioru sieć nauczyła się go bez problemu. Nawet wyniki na zbiorze walidacyjnym są niezłe, chociaż pod koniec treningu wartość funkcji straty dla niego zmniejsza się wolniej. Z tego powodu kolejny eksperyment, dla większej próbki, przeprowadzono zmieniając ustawienia tylko nieznacznie
 
-# Wyniki dla zbioru MNIST - drugi eksperyment
+## Wyniki dla zbioru MNIST - drugi eksperyment
 
 Tym razem przeprowadzony został docelowy eksperyment na dużej próbce danych. Ze względu na bardzo długi czas obliczeń dla tej liczby neuronów, nie wykorzystano całego zbioru MNIST, a jedynie 400 próbek z niego pochodzących. Przy podziale upewniono się, że wybrany podzbiór zawiera równomierny rozkład wszystkich klas. Najmniej liczna klasa w tym zbiorze stanowiła 9,75 %, natomiast najbardziej liczna: 10,50%, co oznacza że był on zrównoważony.
 Zestaw był podzielony na trzy zbiory: Treningowy o liczebności 320, walidacyjny o liczebności 64 oraz testowy o liczebności 80.
@@ -184,7 +184,7 @@ Macierze pomyłek przybliżają charakter błędów popełnianych przez klasyfik
 Pozostałe klasy perceptron rozpoznaje bez problemu, co zostało potwierdzone na zbiorze testowym (ostatnia macierz). 
 
 
-# Wnioski
+## Wnioski
 
 Stworzona implementacja pozwala w elastyczny sposób inicjalizować sieci o różnej liczbie warstw, neuronów, różnych funkcjach aktywacji i parametrach uczenia. Dzięki temu można ją wykorzystywać dla zbiorów danych o różnej liczebności, stopniu skomplikowania, wymiarze danych wejściowych oraz różnej liczbie klas. 
 \

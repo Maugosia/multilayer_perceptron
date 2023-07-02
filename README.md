@@ -1,7 +1,7 @@
 # Perceptron wielowarstwowy
 ***Wykonawcy - Sofiia Levchenko [sofiia2002](https://github.com/sofiia2002), Małgorzata Sikora [Maugosia](https://github.com/Maugosia)***
 ## Wstęp
-Tematem projektu jest implementacja perceptronu wielowarstwowego o wybranym
+Tematem projektu jest implementacja od zera perceptronu wielowarstwowego o wybranym
 algorytmie optymalizacji gradientowej z algorytmem propagacji wstecznej i przetestowanie jego
 działania na ogólnodostępnym zbiorze danych MNIST.
 Zadanie zrealizowano w sposób ogólny tak, aby sieć dało się testować również na innych
